@@ -10574,7 +10574,7 @@ moteurHTML.showMessageJoueur = function (idJoueur,message) {
  
  if (emoticons[message]) {
   // Définir l'URL de l'émoticône en fonction de la valeur de emoticons[message]
-  var iconUrl = emoticons[message] > 61 
+  var iconUrl = emoticons[message] > 65 
       ? 'https://amu11er.github.io/emot' + emoticons[message] + '.png'
       : '/images/Emoticon/Emoticon' + emoticons[message] + '.png?v=4';
 
