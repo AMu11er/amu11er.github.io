@@ -7565,7 +7565,7 @@ function findEmot(i) {
  return false;
 }
 function checkEmot() {
- for (var i=0;i<49;i++) {
+ for (var i=0;i<65;i++) {
  if (!findEmot(i)) alert(i);
  }
  alert('ok');
