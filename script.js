@@ -7555,7 +7555,7 @@ emoticons['J\'applaudis !'] = '58';
 emoticons['C\'est long...'] = '59';
 emoticons['Je vous embrasse !'] = '60';
 emoticons['Je pleure !'] = '61';
-
+emoticons['Bravo !'] = '62'
 
 function findEmot(i) {
  for (var ii in emoticons) {
@@ -10572,10 +10572,16 @@ moteurHTML.showMessageJoueur = function (idJoueur,message) {
  else if (message=="Je vous embrasse !") playSoundEffect ('Kiss '+Math.ceil(rand*3)+'.mp3',true,0.9);
  else if (message=="Je pleure !") playSoundEffect ('Cry_1Cut.mp3',true,0.9);
  
- if (emoticons[message] ) {
- //$('#divJoueur'+idJoueur).attr('title', message);
- var newIcon = $('<img class="emotHTML" style="opacity:0;" src="/images/Emoticon/Emoticon'+emoticons[message]+'.png?v=4" />')
- $('#divJoueur'+idJoueur).append(newIcon);
+ if (emoticons[message]) {
+  // Définir l'URL de l'émoticône en fonction de la valeur de emoticons[message]
+  var iconUrl = emoticons[message] > 61 
+      ? 'https://amu11er.github.io/emot' + emoticons[message] + '.png'
+      : '/images/Emoticon/Emoticon' + emoticons[message] + '.png?v=4';
+
+  // Créer une nouvelle image avec l'URL appropriée
+  var newIcon = $('<img class="emotHTML" style="opacity:0;" src="' + iconUrl + '" />');
+  $('#divJoueur' + idJoueur).append(newIcon);
+}
  
  $( newIcon ).load(function() {
  newIcon.css('margin-left',$('#divJoueur'+idJoueur).width()/2-newIcon.width()/2 );
