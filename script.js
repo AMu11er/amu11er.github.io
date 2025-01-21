@@ -7566,7 +7566,7 @@ function findEmot(i) {
  return false;
 }
 function checkEmot() {
- for (var i=0;i<63;i++) {
+ for (var i=0;i<65;i++) {
  if (!findEmot(i)) alert(i);
  }
  alert('ok');
@@ -7590,7 +7590,7 @@ function toggleEmot() {
  //for (var i = 0;i<49;i++) {
  for (var ii in myEmots) {
  var i = myEmots[ii];
- str += '<img onclick="sendEmot('+i+');" src="https://amu11er.github.io/Emoticon'+i+'.png?v2" class="emotIcon"/>';
+ str += '<img onclick="sendEmot('+i+');" src="https://amu11er.github.io/Emoticon'+i+'.png" class="emotIcon"/>';
  //pp.append($('<img onclick="sendEmot('+i+');" src="/images/Emoticon/Emoticon'+i+'.png" class="emotIcon"/>'));
  
  }
@@ -12931,7 +12931,7 @@ function initEngineInt(endFunc) {
  gamePhaser.load.image('ChatMid3', '/img/Jeu/ChatMid3.png');
  gamePhaser.load.image('ChatTop3', '/img/Jeu/ChatTop3.png');
  
- for (var oo=0;oo<63;oo++)
+ for (var oo=0;oo<65;oo++)
  gamePhaser.load.image('Emoticon'+oo, 'https://amu11er.github.io/Emoticon'+oo+'.png');
 
  gamePhaser.load.image('Accessoire01', '/img/Jeu/Accessoires/Accessoire01.png');
