@@ -7558,6 +7558,7 @@ emoticons['Je pleure !'] = '61';
 emoticons['Bravo !'] = '62';
 
 
+
 function findEmot(i) {
  for (var ii in emoticons) {
  var ic = emoticons[ii];
@@ -7566,7 +7567,7 @@ function findEmot(i) {
  return false;
 }
 function checkEmot() {
- for (var i=0;i<65;i++) {
+ for (var i=0;i<50;i++) {
  if (!findEmot(i)) alert(i);
  }
  alert('ok');
@@ -7590,8 +7591,8 @@ function toggleEmot() {
  //for (var i = 0;i<49;i++) {
  for (var ii in myEmots) {
  var i = myEmots[ii];
- str += '<img onclick="sendEmot('+i+');" src="https://amu11er.github.io/Emoticon'+i+'.png" class="emotIcon"/>';
- //pp.append($('<img onclick="sendEmot('+i+');" src="/images/Emoticon/Emoticon'+i+'.png" class="emotIcon"/>'));
+ str += '<img onclick="sendEmot('+i+');" src="https://amu11er.rf.gd/Emoticon'+i+'.png?v2" class="emotIcon"/>';
+ //pp.append($('<img onclick="sendEmot('+i+');" src="https://amu11er.rf.gd/Emoticon'+i+'.png" class="emotIcon"/>'));
  
  }
  ppEmottt.html(str);
@@ -9780,7 +9781,7 @@ moteurHTML.createGameBoard = function (modeJeu,chatJoueurs,nbJoueurs,etesVousLa,
  equipeHTML += '<table style="" id="chatTable">'; 
  equipeHTML += '<tr>'; 
  if (chatJoueurs!=0 && !window.disableEmoticons) {
- equipeHTML += '<td onclick="toggleEmot();" id="IMGEMOT" style="background-image: url(\'https://amu11er.github.io/Emoticon0.png\');"></td>'; 
+ equipeHTML += '<td onclick="toggleEmot();" id="IMGEMOT" style="background-image: url(\'https://amu11er.rf.gd/Emoticon0.png\');"></td>'; 
  } 
  equipeHTML += '<td style="padding-left:4px" id="chtput">';  
  
@@ -10575,7 +10576,7 @@ moteurHTML.showMessageJoueur = function (idJoueur,message) {
  
  if (emoticons[message] ) {
  //$('#divJoueur'+idJoueur).attr('title', message);
- var newIcon = $('<img class="emotHTML" style="opacity:0;" src="https://amu11er.github.io/Emoticon'+emoticons[message]+'.png" />')
+ var newIcon = $('<img class="emotHTML" style="opacity:0;" src="https://amu11er.rf.gd/Emoticon'+emoticons[message]+'.png" />')
  $('#divJoueur'+idJoueur).append(newIcon);
  
  $( newIcon ).load(function() {
@@ -11055,7 +11056,7 @@ moteurHTML2.createGameBoard = function (modeJeu,chatJoueurs,nbJoueurs,etesVousLa
  equipeHTML += '<table style="" id="chatTable">'; 
  equipeHTML += '<tr>'; 
  if (chatJoueurs!=0 && !window.disableEmoticons) {
- equipeHTML += '<td onclick="toggleEmot();" id="IMGEMOT" style="background-image: url(\'https://amu11er.github.io/Emoticon0.png\');"></td>'; 
+ equipeHTML += '<td onclick="toggleEmot();" id="IMGEMOT" style="background-image: url(\'https://amu11er.rf.gd/Emoticon0.png\');"></td>'; 
  } 
  equipeHTML += '<td style="padding-left:4px" id="chtput">';  
  
@@ -12001,7 +12002,7 @@ moteurHTML2.showMessageJoueur = function (idJoueur,message) {
  
  if (emoticons[message] ) {
  
- var newIcon = $('<img class="emotHTML" style="opacity:0;" src="https://amu11er.github.io/Emoticon'+emoticons[message]+'.png" />')
+ var newIcon = $('<img class="emotHTML" style="opacity:0;" src="https://amu11er.rf.gd/Emoticon'+emoticons[message]+'.png" />')
  $('#divJoueur'+idJoueur).append(newIcon);
  $( newIcon ).load(function() {
  newIcon.css('margin-left',$('#divJoueur'+idJoueur).width()/2-newIcon.width()/2);
@@ -12931,8 +12932,8 @@ function initEngineInt(endFunc) {
  gamePhaser.load.image('ChatMid3', '/img/Jeu/ChatMid3.png');
  gamePhaser.load.image('ChatTop3', '/img/Jeu/ChatTop3.png');
  
- for (var oo=0;oo<65;oo++)
- gamePhaser.load.image('Emoticon'+oo, 'https://amu11er.github.io/Emoticon'+oo+'.png');
+ for (var oo=0;oo<63;oo++)
+ gamePhaser.load.image('Emoticon'+oo, 'https://amu11er.rf.gd/Emoticon'+oo+'.png');
 
  gamePhaser.load.image('Accessoire01', '/img/Jeu/Accessoires/Accessoire01.png');
  gamePhaser.load.image('Accessoire02', '/img/Jeu/Accessoires/Accessoire02.png');
@@ -13281,7 +13282,7 @@ moteurPhaser.createGameBoard = function (modeJeu,chatJoueurs,nbJoueurs,etesVousL
  equipeHTML += '<table style="" id="chatTable">';  
  equipeHTML += '<tr>'; 
  if (chatJoueurs!=0 && !window.disableEmoticons ) {
- equipeHTML += '<td onclick="toggleEmot();" id="IMGEMOT" style="background-image: url(\'https://amu11er.github.io/Emoticon0.png\');"></td>'; 
+ equipeHTML += '<td onclick="toggleEmot();" id="IMGEMOT" style="background-image: url(\'https://amu11er.rf.gd/Emoticon0.png\');"></td>'; 
  } 
  equipeHTML += '<td style="padding-left:4px" id="chtput">';  
 
